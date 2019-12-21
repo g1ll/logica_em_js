@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<style>p{font-size:32px}</style>
+</head>
+<body>
+<script>
+	var a = prompt('Digite a primeira nota N1:');//retorna o tipo string
+	a = parseFloat(a);//Converte para numérico
+	console.log(a);
+	var b = parseFloat(prompt('Digite a segunda nota N2:'));
+	console.log(b);
+	var media = (a+b)/2;
+	var saida = 'Média do aluno: '+media.toFixed(2)+"\n";
+	console.log(saida);
+	alert(saida);
+	document.write("<p>"+saida+"</p>");
+</script>
+</body>
+</html>

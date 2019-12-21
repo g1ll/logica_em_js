@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+</head>
+<body>
+<script>
+	var c = prompt('Informe a temperatura em Celcius:');
+	var f = 9*c/5+32;
+	console.log(f);
+	//Templates ECMAScript2015
+	var saida = `Cº: ${c} \nFº: ${f.toFixed(2)}`;
+
+	alert(saida)
+	document.write("<pre>"+saida+"</pre>");
+</script>
+</body>
+</html>

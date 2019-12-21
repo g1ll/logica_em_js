@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+</head>
+<body>
+<script>
+	var l = prompt('Informe a Largura da cozinha:');
+	var a = prompt('Informe a Altura da cozinha:');
+	var c = prompt('Informe o Comprimento da cozinha:');
+
+	var A =  l*a*2+c*a*2;
+
+	//Templates ECMAScript2015
+	var saida = `Área da cozinha: ${A.toFixed(2)}`;
+	alert(saida)
+	document.write("<pre>"+saida+"</pre>");
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<style>pre {font-family: "courier new", courier, monospace;font-size: 32px;font-weight: bold}</style>
+</head>
+<body>
+<script>
+	var totalEleitores = prompt('Informe o Total de Eleitores:');
+	var votosBrancos = prompt('Informe os Votos Brancos:');
+	var votosNulos = prompt('Informe os Votos Nulos:');
+	var votosValidos = prompt('Informe os Votos Válidos:');
+
+	var perVotosBrancos = (votosBrancos*100)/totalEleitores; 
+	var perVotosNulos = (votosNulos*100)/totalEleitores; 
+	var perVotosValidos = (votosValidos*100)/totalEleitores; 
+	
+	//Templates Strings ECMAScript2015
+	var saida = `Total de Eleitores: ${totalEleitores}\n
+		Votos Brancos: ${votosBrancos} (${perVotosBrancos} %)
+		Votos Nulos: ${votosNulos} (${perVotosNulos} %)
+		Votos Válidos: ${votosValidos} (${perVotosValidos} %)`;
+
+	alert(saida)
+	document.write("<pre>"+saida+"</pre>");
+</script>
+</body>
+</html>

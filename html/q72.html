@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<style>pre {font-family: "courier new", courier, monospace;font-size: 32px;font-weight: bold}</style>
+</head>
+<body>
+<script>
+	var i,j,s,n,m = [], saida='Matriz:\n';
+
+	for(i=0, s =5, n = 0;i<s;i++){
+		m[i] = [];//Cria um novo objeto array
+		for(j=0;j<s;j++){
+			m[i][j] = n++;
+			//m[i][j] = parseInt(Math.random()*100);
+			saida += ((m[i][j]<10)?'0':'')+m[i][j]+' ';
+		}
+		saida+='\n';
+	}
+	
+	//saida += `\n ${m.join('\n ')}\n`;
+	//console.log(m);
+
+	for(j=0,i=3,n=0;j<s;j++){
+		n+=m[i][j];
+	}
+	saida += `\na) Soma da linha 4: ${n}`;
+
+	for(j=1,i=0,n=0;i<s;i++){
+		n+=m[i][j];
+	}
+	saida += "\nb) Soma da coluna 2: "+n+"";
+
+	for(j=0,i=0,n=0;i<s;i++,j++){
+		n+=m[i][j];
+	}
+	saida += '\nc) Soma da diagonal principal: '+n;
+
+	for(j=s-1,i=0,n=0;i<s;i++,j--){
+		n+=m[i][j];
+	}
+	saida += `\nd) Soma da diagonal secundaria: ${n}`;
+
+	for(i=0,n=0;i<s;i++){
+		for(j=0;j<s;j++){
+			n+=m[i][j];
+		}
+	}
+	saida += "\ne) Soma total: "+n;
+
+	alert(saida)
+	document.write("<pre>"+saida+"</pre>");
+</script>
+</body>
+</html>

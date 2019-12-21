@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<link rel='icon' href='#'>
+<style>pre {font-family: "courier new", courier, monospace;font-size: 32px;font-weight: bold}</style>
+</head>
+<body>
+<script>
+	var i=0,j,s,n,m = [], saida='';
+	
+	s = parseInt(prompt('Defina o tamanho do Vetor:'));
+
+	saida += 'Tamanhdo do Vetor: '+s+'\n\nVetor Lido:\n';
+	do{
+		m[i] = parseInt(prompt('Informe um valor inteiro'));
+		saida += m[i]+' ';
+		i++;
+	}while(i<s);
+	
+	saida += '\nVetor Transformado:\n';
+	for(i=0;i<s;i++){
+		if(m[i]<0){
+			m[i]=0;
+		}
+		saida += m[i]+' ';
+	}
+
+	alert(saida)
+	document.write("<pre>"+saida+"</pre>");
+</script>
+</body>
+</html>
